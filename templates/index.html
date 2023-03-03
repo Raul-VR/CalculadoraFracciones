@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Lo que estra entre corchetes y parentesis lo interpreta django, nunca se va a mostrar en el css -->
+    {% load static %}
+    <link href="{% static 'estilos.css' %}", rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Bienvenido a la calculadora de fracciones
+
+        <!-- DATOS VIA GET LOS PARAMETROS VAN EN LA URL, datos via post los parametros van en el cuerpo de la petición. El metodo post se usa para mas seguridad_ -->
+        <!-- Lo que más va a funcionar en django es definir end points (urls?) -->
+        
+        <!-- <form action="proceso" method="POST">
+            {% csrf_token %}
+            <input type="text" name="nombre"/>
+            <input type="submit"/>
+        </form> -->
+    </h1>
+    <h2>
+        Raúl Armando Vélez Robles
+        <br>
+        A01782488
+    </h2>
+    <h3>
+        Endpoints de la calculadora
+    </h3>
+    <ul>
+
+        <li>/suma</li>
+        <li>/resta</li>
+        <li>/multiplicacion</li>
+        <li>/division</li>
+    </ul>
+
+</body>
+</html>
