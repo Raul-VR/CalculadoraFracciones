@@ -46,7 +46,11 @@ def suma(request):
     denominador1 = body['denominador1']
     numerador2 = body['numerador2']
     denominador2 = body['denominador2']
-    resultado = Fraccion(numerador1+numerador2,denominador1+denominador2)
+    if (denominador1 == denominador2):
+        resultado = Fraccion( (numerador1+numerador2) , denominador1 )
+    else:
+        resultado = Fraccion( (numerador1*denominador2)+(denominador1*numerador2) , denominador1*denominador2 )
+
     #El \ es para decir que la linea continua
     json_resultado = resultado.toJSON()
     return HttpResponse(json_resultado, \
